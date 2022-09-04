@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		* {
+   margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Source Sans Pro', sans-serif;
+
+}
+/* 
+#myInput {
+ background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 375px;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+border: 1px solid rgb(146, 140, 248);
+border-radius: 10px;
+display: flex;
+flex-direction: row;
+} */
+h2{
+font-size: 40px;
+color: black;
+padding: 10px 50px 10px 50px;
+}
+body {
+width: 100%;
+height: 100vh;
+background: rgb(240, 239, 243);
+/* font-size: 500px; */
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: url("https://images.unsplash.com/photo-1535540878298-a155c6d065ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center fixed;
+background-size: cover;
+
+}
+/* #myUL {
+width: 375px;
+height: 150px;
+background:white;
+border-radius: 15px;
+box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.05);
+padding: 20px;
+overflow-y: scroll;
+}
+#myUL::-webkit-scrollbar{
+display: none;
+}
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  /* background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+} */ 
+	</style>
+</head>
+<body>
+	<div style="margin-bottom: 50px; color:white; font-size: 50px; text-shadow:aquamarine 1px 0 10px;">
+	 <strong  >DOWNLOAD VIDEOS</strong>	
+	</div>
+<input type="txt" name="link" class="link" required>
+<select style="font-size: 30px;" class="formate" required>
+	<option value="mp3">mp3</option>
+	<option value="360">360 mp4</option>
+	<option value="480">480 mp4</option>
+	<option value="720">720 mp4</option>
+	<option value="1080">1080 mp4</option>
+	<option value="4k">4k mp4</option>
+	
+
+</select>
+<div class="download-video">
+	<button style="font-size: 20px;" type="submit" class="btn">click to download</button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(".btn").click(function(){
+		var link=$(".link").val();
+		var formate=$(".formate").children("option:selected").val();
+		downloadVideo(link,formate)
+	})
+	function downloadVideo(link,formate){
+		$(".download-video").html('<iframe style="width:230px;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+formate+'"></iframe>')
+	}
+</script>
+
+
+
+
+
+</body>
+</html>

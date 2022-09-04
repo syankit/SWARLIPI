@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+   margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+#myInput {
+ background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 375px;
+  font-size: 16px;
+  padding: 12px 20px 12px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+border: 1px solid rgb(146, 140, 248);
+border-radius: 10px;
+display: flex;
+flex-direction: row;
+}
+h2{
+font-size: 40px;
+color: black;
+padding: 10px 50px 10px 50px;
+}
+body {
+width: 100%;
+height: 100vh;
+background: rgb(240, 239, 243);
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: url("https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80") no-repeat center center fixed;
+background-size: cover;
+}
+#myUL {
+width: 375px;
+height: 150px;
+background:white;
+border-radius: 15px;
+box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.05);
+padding: 20px;
+overflow-y: scroll;
+}
+#myUL::-webkit-scrollbar{
+display: none;
+}
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body >
+
+<h2>My search</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></li>
+  <li><a href="https://www.python.org/doc/essays/blurb/">What is Python ?</a></li>
+  <li><a href="https://www.python.org/about/apps/">What is Python used for</a></li>
+  <li><a href="https://www.codecademy.com/catalog/language/python">What is Python course?</a></li>
+
+  <li><a href="https://www.python.org/doc/essays/blurb/">What is python programming?</a></li>
+  <li><a href="https://www.python.org/about/apps/">Why is python used ?</a></li>
+  <li><a href="https://www.python.org/downloads/">How to download python</a></li>
+  <li><a href="https://python-course.eu/python-tutorial/execute-a-script.php#:~:text=Python%20code%20is%20translated%20into,Java%20Virtual%20Machine%20(JVM).">How python code is executed</a></li>
+  <li><a href="https://www.tutordoctor.co.uk/blog/2022/march/5-educational-youtube-channels-for-primary-schoo/ ">Primary School Students course</a></li>
+  <li><a href="https://www.tutordoctor.co.uk/blog/2022/may/5-educational-youtube-channels-for-secondary-sch/">Secondary School Students courses</a></li>
+  <li><a href="https://aimseducation.edu/blog/7-medical-youtube-channels"> Medical courses</a></li>
+  <li><a href="https://www.youtube.com/channel/UCsuzMtq1XIFtF4EfFlFxP6A"> Commerce courses</a></li>
+  <li><a href="https://www.youtube.com/channel/UC99bgsOn-TCFCCN6tWaS8xA"> Humanities courses</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/C_(programming_language)">What is C ?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/C_(programming_language)"> What is C used for?</a></li>
+  <li><a href="https://www.edx.org/learn/c-programming#:~:text=A%20low%2Dlevel%20procedural%20language,computer%20programming%20languages%20like%20Python">What is C course?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/C_(programming_language)"> Why is C used for?</a></li>
+  <li><a href="https://www.javatpoint.com/how-to-install-c"> How to download C?</a></li>
+  <li><a href="https://www.javatpoint.com/how-to-install-c">How C code is executed?</a></li>
+  <li><a href="https://www.w3schools.com/cpp/cpp_intro.asp"> What is C++ ?</a></li>
+  <li><a href="https://www.w3schools.com/cpp/cpp_intro.asp">What is C++ used for?</a></li>
+  <li><a href="https://www.w3schools.com/cpp/cpp_intro.asp"> What is C++ course?</a></li>
+  <li><a href="https://www.w3schools.com/cpp/cpp_intro.asp"> Why is C++ used for?</a></li>
+  <li><a href="https://www.javatpoint.com/cpp-installation"> How to download C++?</a></li>
+  <li><a href="https://sites.google.com/site/assignmentssolved/mca/semester2/mc0066/13"> How C++ code is executed?</a></li>
+  <li><a href="https://www.javatpoint.com/cpp-installation">Difference between C and C++</a></li>
+  <li><a href="https://www.java.com/en/download/help/whatis_java.html">What is JAVA ?</a></li>
+  <li><a href="https://www.java.com/en/download/help/whatis_java.html">Why is JAVA used for?</a></li>
+  <li><a href="https://www.simplilearn.com/tutorials/java-tutorial/what-is-java">What is JAVA course?</a></li>
+  <li><a href="https://support.microsoft.com/en-us/windows/install-java-in-internet-explorer-e9fde175-f750-2902-d6da-a97a83587856">How to download JAVA?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/HTML">What is HTML ?</a></li>
+  <li><a href="https://www.w3.org/standards/webdesign/htmlcss#:~:text=HTML%20is%20the%20language%20for,the%20click%20of%20a%20button.">Why is HTML used for?</a></li>
+  <li><a href="https://www.coursera.org/courses?query=html,%20css%20and%20javascript">What is HTML ,CSS ,JS course?</a></li>
+  <li><a href="https://winbuzzer.com/2021/04/21/how-to-download-a-webpage-as-html-in-chrome-xcxwbt/">How to download HTML?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/CSS">What is CSS ?</a></li>
+  <li><a href="https://www.w3.org/standards/webdesign/htmlcss#:~:text=HTML%20is%20the%20language%20for,the%20click%20of%20a%20button.">Why is CSS used for?</a></li>
+  <li><a href="https://www.ibm.com/docs/en/sim/7.0.1.13?topic=center-downloading-samplecss-file">How to download CSS?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/JavaScript">What is JS ?</a></li>
+  <li><a href="https://generalassemb.ly/blog/what-is-a-javascript-library/">What are JS libraries?</a></li>
+  <li><a href="https://www.lighthouselabs.ca/en/blog/what-is-javascript-used-for#:~:text=Javascript%20is%20used%20by%20programmers,by%2097.0%25%20of%20all%20websites.">Why is JS used for?</a></li>
+  <li><a href="https://forum.freecodecamp.org/t/javascript-where-to-download/166022">How to download JS?</a></li>
+  <li><a href="https://www.investopedia.com/terms/b/blockchain.asp">What is BLOCKCHAIN ?</a></li>
+  <li><a href="https://www.simplilearn.com/blockchain-programming-languages-article">Which language is used in blockchain development ?</a></li>
+  <li><a href="https://www.techtarget.com/searchapparchitecture/definition/user-interface-UI">What is UI ?</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/User_experience">What is UX ?</a></li>
+  <li><a href="https://maze.co/blog/ui-vs-ux/">Difference between UI and UX ?</a></li>
+  <li><a href="https://www.henryharvin.com/ppc3/blockchain-certification-training?utm_source=google&utm_medium=cpc&utm_campaign=blockchain_search&gclid=Cj0KCQjwidSWBhDdARIsAIoTVb10i-5xVLUfn-3jTb4ebwWb520aH3i966f6TZpfv-zQgadhoeXVm64aAjxwEALw_wcB">BLOCKCHAIN COURSES</a></li>
+  <li><a href="https://www.coursera.org/articles/ui-vs-ux-design">UI/UX COURSES</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Non-fungible_token">What is NFT?</a></li>
+  <li><a href="https://zipmex.com/learn/nft-marketplace/">Where to sell/buy NFT?</a></li>
+
+</ul>
+  
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
